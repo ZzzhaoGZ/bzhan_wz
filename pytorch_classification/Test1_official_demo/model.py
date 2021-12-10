@@ -1,5 +1,8 @@
 import torch.nn as nn
 import torch.nn.functional as F
+'''
+虽然安装的是pytorch但是导入的还是torch
+'''
 
 
 class LeNet(nn.Module):
@@ -23,5 +26,4 @@ class LeNet(nn.Module):
         x = F.relu(self.fc2(x))      # output(84)
         x = self.fc3(x)              # output(10)
         return x
-
 
